@@ -1,0 +1,27 @@
+﻿<Window x:Class="WpfApp4.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp4"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition/>
+            <RowDefinition Height="auto"/>
+        </Grid.RowDefinitions>
+        <ListBox x:Name="listbox1" SelectionChanged="listSelect"/>
+        <Button Content="Test Get" Click="Button_Click" Grid.Row="1"/>
+        <Button Content="Test Post" Click="Button_ClickPost" Grid.Row="2"/>
+        <StackPanel Grid.Row="3">
+            <DatePicker x:Name="datePicker"/>
+            <TextBox x:Name="textC"/>
+            <TextBox x:Name="textSummary"/>
+        </StackPanel>
+        <Button Content="Test Put" Click="Button_Click_Put" Grid.Row="4"/>
+    </Grid>
+</Window>
